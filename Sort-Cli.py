@@ -181,14 +181,14 @@ if __name__ == '__main__':
     print("\n")
     print(colored(pyfiglet.figlet_format("Sort-Cli"), 'blue'))
     print(colored('Welcome to', 'green'),colored('Sort-Cli', 'green', attrs=['bold']))
-    print("\n\n")
+    print("\n")
     args = parser.parse_args()
 
     if not (args.bubblesort or args.insertionsort or args.selectionsort or args.mergesort or args.quicksort or args.heapsort):
         print(parser.parse_args(['-h']))
 
     if args.insertionsort:
-        print("########Sorting file by Insertion sort#######")
+        print(colored('Information:', "yellow"), "Sorting file by Insertion sort\n")
         print("Before sort:", end = "\n")
         print_array(arr)
         insertionsort(arr)
@@ -196,7 +196,7 @@ if __name__ == '__main__':
         print_array(arr)
 
     elif args.selectionsort:
-        print("########Sorting file by Selection sort#######")
+        print(colored('Information:', "yellow"), "Sorting file by Selection Sort\n")
         print("Before sort:", end = "\n")
         print_array(arr)
         selectionsort(arr)
@@ -204,7 +204,7 @@ if __name__ == '__main__':
         print_array(arr)
 
     elif args.mergesort:
-        print("########Sorting file by Merge sort#######")
+        print(colored('Information:', "yellow"), "Sorting file by Merge Sort\n")
         print("Before sort:", end = "\n")
         print_array(arr)
         mergesort(arr)
@@ -212,7 +212,7 @@ if __name__ == '__main__':
         print_array(arr)
 
     elif args.quicksort:
-        print("########Sorting file by Quick sort#######")
+        print(colored('Information:', "yellow"), "Sorting file by Quick Sort\n")
         length = len(arr)
         print("Before sorting:", end = "\n")
         print_array(arr)
@@ -221,7 +221,7 @@ if __name__ == '__main__':
         print_array(arr)
 
     elif args.heapsort:
-        print("########Sorting file by Heap sort#######")
+        print(colored('Information:', "yellow"), "Sorting file by Heap Sort\n")
         print("Before sort:", end = "\n")
         print_array(arr)
         heapsort(arr)
