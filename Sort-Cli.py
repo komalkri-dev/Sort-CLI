@@ -22,7 +22,7 @@ try:
 except ImportError:
     colored = None
 
-
+print("\n")
 select_file = input("Enter the path of your file: ")
 assert os.path.exists(select_file), "I did not find the file at, "+str(select_file)
 with open(select_file, "r+") as f:
@@ -57,7 +57,7 @@ if __name__ == '__main__':
 
     if args.bubblesort:
         print(colored('Information:', "yellow"), "Sorting file by Bubble sort\n")
-        print("Before sort:", end = "\n")
+        print("Before sorting:", end = "\n")
         bubble = Bubble(arr)
         bubble.print_array(arr)
         bubble.bubble_sort(arr)
@@ -66,7 +66,7 @@ if __name__ == '__main__':
 
     elif args.insertionsort:
         print(colored('Information:', "yellow"), "Sorting file by Insertion sort\n")
-        print("Before sort:", end = "\n")
+        print("Before sorting:", end = "\n")
         ins = InsertionSort(arr)
         ins.print_array(arr)
         ins.insertionsort(arr) 
@@ -76,7 +76,7 @@ if __name__ == '__main__':
 
     elif args.selectionsort:
         print(colored('Information:', "yellow"), "Sorting file by Selection Sort\n")
-        print("Before sort:", end = "\n")
+        print("Before sorting:", end = "\n")
         selection = Selection(arr)
         selection.print_array(arr)
         selection.selectionsort(arr)
@@ -85,7 +85,7 @@ if __name__ == '__main__':
 
     elif args.mergesort:
         print(colored('Information:', "yellow"), "Sorting file by Merge Sort\n")
-        print("Before sort:", end = "\n")
+        print("Before sorting:", end = "\n")
         merge = Merge(arr)
         merge.print_array(arr)
         merge.mergesort(arr)
@@ -105,7 +105,7 @@ if __name__ == '__main__':
 
     elif args.heapsort:
         print(colored('Information:', "yellow"), "Sorting file by Heap Sort\n")
-        print("Before sort:", end = "\n")
+        print("Before sorting:", end = "\n")
         heap = Heap(arr)
         heap.print_array(arr)
         heap.heapsort(arr)
