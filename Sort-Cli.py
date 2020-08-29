@@ -79,7 +79,7 @@ if __name__ == '__main__':
         selection.print_array(arr)
         selection.selectionsort(arr)
         print("After sorting:", end = "\n")
-        selection.selectionsort(arr)
+        selection.print_array(arr)
 
     elif args.mergesort:
         print(colored('Information:', "yellow"), "Sorting file by Merge Sort\n")
@@ -88,7 +88,7 @@ if __name__ == '__main__':
         merge.print_array(arr)
         merge.mergesort(arr)
         print("After sorting:", end = "\n")
-        merge.mergesort(arr)
+        merge.print_array(arr)
 
     elif args.quicksort:
         print(colored('Information:', "yellow"), "Sorting file by Quick Sort\n")

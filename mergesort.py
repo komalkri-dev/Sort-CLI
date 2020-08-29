@@ -10,8 +10,8 @@ class Merge:
             left = arr[:mid]
             right = arr[mid:]
 
-            mergesort(left)
-            mergesort(right)
+            self.mergesort(left)
+            self.mergesort(right)
 
             i = j = k = 0
             while i < len(left) and j < len(right):
