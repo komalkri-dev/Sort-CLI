@@ -1,4 +1,18 @@
 # Sort-Cli
+
+A command line interface to sort a given file by using different sorting algorithms.
+
+# Sorting Algorithms Used
+
+1. Bubble sort
+2. Merge sort
+3. Insertion sort
+4. Selection sort
+5. Quick sort
+6. Heap sort
+
+# Usage:
+
 usage: Sort-Cli.py [-h] [-B] [-I] [-S] [-M] [-Q] [-He]
 
 Sort-CLI, sort a text file or some given data.
