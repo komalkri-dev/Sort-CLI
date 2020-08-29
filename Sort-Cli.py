@@ -1,4 +1,6 @@
+""" This Script will sort any text file with numeric values only"""
 import argparse
+import os
 import sys
 from termcolor import colored
 import pyfiglet
@@ -21,11 +23,12 @@ except ImportError:
     colored = None
 
 
-with open('data.txt', "r") as f:
+select_file = input("Enter the path of your file: ")
+assert os.path.exists(select_file), "I did not find the file at, "+str(select_file)
+with open(select_file, "r+") as f:
     file = f.read().splitlines()
 
-arr = [int(element) for element in file]
-
+arr = [int(element) for element in file] 
 parser = argparse.ArgumentParser(description='Sort-CLI, sort a text file or some given data.', prog = 'Sort-Cli.py')
 
 parser.add_argument(
@@ -61,8 +64,7 @@ if __name__ == '__main__':
         print("After sorting:", end = "\n")
         bubble.print_array(arr)
 
-
-    if args.insertionsort:
+    elif args.insertionsort:
         print(colored('Information:', "yellow"), "Sorting file by Insertion sort\n")
         print("Before sort:", end = "\n")
         ins = InsertionSort(arr)
@@ -89,6 +91,7 @@ if __name__ == '__main__':
         merge.mergesort(arr)
         print("After sorting:", end = "\n")
         merge.print_array(arr)
+        exit()
 
     elif args.quicksort:
         print(colored('Information:', "yellow"), "Sorting file by Quick Sort\n")
@@ -113,4 +116,6 @@ if __name__ == '__main__':
         print(parser.parse_args(['-h']))
         sys.exit(2)
 
+f.close()
 
+   

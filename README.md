@@ -25,3 +25,9 @@ optional arguments:
   -M, --mergesort      Sort by merge sort algorithm
   -Q, --quicksort      Sort by quick sort algorithm
   -He, --heapsort      Sort by heap sort algorithm
+
+  # Important Points
+
+  1. This code only works for a text file with numeric values
+  2. You have to specify whole path of your file as user input
+  
